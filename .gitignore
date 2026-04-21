@@ -1,0 +1,52 @@
+# ── Flutter/Dart ──────────────────────────────────────
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+build/
+
+# ── Android ───────────────────────────────────────────
+android/.gradle/
+android/local.properties
+android/captures/
+android/gradlew
+android/gradlew.bat
+
+# NOTE: firebase_options.dart is intentionally committed
+# (Firebase web config is public by design)
+
+# ── iOS ───────────────────────────────────────────────
+ios/.symlinks/
+ios/Flutter/.last_build_id
+ios/Pods/
+*.xcworkspace
+ios/Runner/GeneratedPluginRegistrant.*
+
+# ── IDE ───────────────────────────────────────────────
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ── Keys / Credentials ────────────────────────────────
+*.keystore
+key.properties
+.env
+.env.local
+*.p8
+*.p12
+
+# ── Coverage ──────────────────────────────────────────
+coverage/
+lcov.info
+
+# ── Generated ─────────────────────────────────────────
+lib/generated_plugin_registrant.dart
+*.g.dart
+*.freezed.dart

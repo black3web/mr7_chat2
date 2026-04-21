@@ -1,0 +1,10 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // MR7 Chat uses custom Firestore-based auth, not Firebase Auth
+    // All storage operations are validated at application level
+    match /{allPaths=**} {
+      allow read, write: if true;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ═══════════════════════════════════════════════════════════════
+    // MR7 Chat uses custom Firestore-based authentication (not Firebase Auth)
+    // Password hashing is done client-side with SHA-256
+    // Rules are open but validated at application layer
+    // ═══════════════════════════════════════════════════════════════
+
+    // Users: anyone can read/create (for registration), 
+    // only owner can update (validated by app logic)
+    match /users/{userId} {
+      allow read: if true;
+      allow create: if true;
+      allow update: if true;
+      allow delete: if false;
+    }
+
+    // Chats: open read/write for participants
+    match /chats/{chatId} {
+      allow read, write: if true;
+      
+      match /messages/{messageId} {
+        allow read, write: if true;
+      }
+    }
+
+    // Groups: open read/write
+    match /groups/{groupId} {
+      allow read, write: if true;
+      
+      match /messages/{messageId} {
+        allow read, write: if true;
+      }
+    }
+
+    // Stories
+    match /stories/{storyId} {
+      allow read, write: if true;
+    }
+
+    // AI Logs
+    match /ai_logs/{logId} {
+      allow create: if true;
+      allow read: if true;
+    }
+
+    // Support messages
+    match /support/{threadId} {
+      allow read, write: if true;
+      
+      match /replies/{replyId} {
+        allow read, write: if true;
+      }
+    }
+
+    // Broadcasts
+    match /broadcasts/{id} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Notifications
+    match /notifications/{id} {
+      allow read, write: if true;
+    }
+
+    // Settings
+    match /settings/{id} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Stickers
+    match /stickers/{packId} {
+      allow read, write: if true;
+    }
+  }
+}

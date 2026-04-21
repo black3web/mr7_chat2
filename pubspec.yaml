@@ -1,0 +1,60 @@
+name: mr7_chat
+description: MR7 Chat - Advanced Real-time Chat and AI Platform
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Firebase
+  firebase_core: ^3.6.0
+  cloud_firestore: ^5.4.4
+  firebase_storage: ^12.3.3
+  firebase_analytics: ^11.3.3
+
+  # State management
+  provider: ^6.1.2
+
+  # Fonts & UI
+  google_fonts: ^6.2.1
+  cached_network_image: ^3.4.1
+  photo_view: ^0.15.0
+  video_player: ^2.9.1
+
+  # Media picking
+  image_picker: ^1.1.2
+
+  # Network
+  http: ^1.2.2
+
+  # Storage & security
+  shared_preferences: ^2.3.3
+  crypto: ^3.0.5
+  uuid: ^4.5.1
+  path: ^1.9.0
+  path_provider: ^2.1.5
+
+  # Utils
+  intl: ^0.19.0
+  url_launcher: ^6.3.1
+  permission_handler: ^11.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/icons/
+    - assets/images/

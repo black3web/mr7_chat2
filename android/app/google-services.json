@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "231946174968",
+    "project_id": "mr7-chat",
+    "storage_bucket": "mr7-chat.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:231946174968:android:46d734ccc11935bd2b960d",
+        "android_client_info": {
+          "package_name": "com.mr7.chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbPrTj2kZjkw5vwNZNHoL4bcu1MbiE5J4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
